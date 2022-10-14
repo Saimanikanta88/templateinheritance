@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    {% block title %}
+    <title>parent</title>
+    {% endblock %}
+    
+    <link rel="stylesheet" href="{% static 'css/mdb.min.css' %}">
+</head>
+<body>
+    <h1 class="btn btn-danger"> this is parent class </h1>
+    <h2> this is also parent</h2>
+
+    <h3>this is third parent </h3>
+    <h3>this is third parent </h3>
+    {% block body_block %}
+    <h1>This is not needed in child</h1>
+    {% endblock body_block %}
+    
+
+    <script src="static 'js/mdb.min.js'"></script>
+</body>
+</html>
